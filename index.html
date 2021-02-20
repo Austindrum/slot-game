@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script src="jquery.spritely.js"></script>
+    <script src="jquery.backgroundPosition.js"></script>
+    <script src="main.js"></script>
+    <style>
+        .bd {
+            text-align: center;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .bd p {
+            font-weight: 700;
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .slot-row {
+            display: flex;
+            width: 258px;
+            margin: 20px auto;
+        }
+        .slot {
+            background: url('images/reel_normal.png') repeat-y;
+            width: 86px;
+            height: 70px;
+            border:1px solid #000;
+            background-position: 3px 4px;
+        }
+        .motion {
+            background:url("images/reel_blur.png") repeat-y;
+        }
+        #control {
+            padding: 15px 32px;
+            border-radius: 10px;
+            background-color: #008CBA;
+            color: #fff;
+            border: none;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;            
+        }
+        #control:disabled {
+            background-color: #e7e7e7;
+            color: black;
+        }
+        #result {
+            font-weight: 700;
+            margin-top: 20px;
+        }
+        .pay {
+            width: 258px;
+            margin: 0 auto;
+        }
+        .account, .paid-coin, .paid, .amount{
+            text-align: left;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .paid-coin input {
+            width: 60px;
+        }
+        .description {
+            width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .description p {
+            margin: 0;
+        }
+        #result {
+            height: 50px;
+        }
+        .description ul {
+            list-style-type: decimal;
+        }
+    </style>
+    <title>Slot Machine</title>
+</head>
+<body>
+    <div class="bd">
+        <h1>JS 角子老虎機</h1>
+        <p>試試手氣吧</p>
+        <div class="pay">
+            <div class="account">
+                剩餘金幣: <span id="account"></span>
+            </div>
+            <div class="paid-coin">
+                投幣金額: <input type="number" value="0">
+                <button id="paid">投幣</button>
+            </div>
+            <div class="amount">
+                下注金額: <span id="amount">0</span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="slot-wrapper">
+                <div class="slot-row">
+                    <div id="slot1" class="slot"></div>
+                    <div id="slot2" class="slot"></div>
+                    <div id="slot3" class="slot"></div>
+                </div>
+            </div>
+            <div><button id="control">開始</button></div>
+            <div id="result"></div>
+            <div class="description">
+                <p>遊戲方式</p>
+                <ul>
+                    <li>輸入欲下注之金額，按下"投幣"</li>
+                    <li>確認下注金額後，按下"開始"鍵(可累加金額)</li>
+                    <li>待三柱老虎機達最高速後方可按下"停止"鍵</li>
+                    <li>顯示結果，祝您中獎!</li>
+                </ul>
+                <p>彩金</p>
+                <ul>
+                    <li>三組皆相同，奪得下注金額之 2 倍金額</li>
+                    <li>三組皆為<img src="./images/seven.png" style="width: 20px;" alt="">，奪得下注金額之 5 倍金額</li>
+                </ul>
+                <p>下注金額</p>
+                <ul>
+                    <li>每注下注小於等於 10 金額，中獎機率為 2.78%</li>
+                    <li>每注下注大於 10 金額，小於等於 20 金額，中獎機率為 5.56%</li>
+                    <li>每注下注大於 20 金額，小於 40 金額，中獎機率為 11.11%</li>
+                    <li>每注下注高於等於 40 金額，中獎機率為 33%</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
