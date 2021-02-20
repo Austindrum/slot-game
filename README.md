@@ -1,6 +1,6 @@
 # Slot 角子老虎機
 
-[DEMO]()
+[DEMO](https://austindrum.github.io/slot-game/)
 
 ## 專案內容
 - 老虎機遊戲模擬
@@ -16,7 +16,7 @@
 ## 安裝
 直接下載或解壓縮即可使用
 ```
-git clone https://github.com/Austindrum/slot-gmae.git
+git clone https://github.com/Austindrum/slot-game.git
 ```
 ## 開發人員
 [Austin Liu](https://github.com/Austindrum)
