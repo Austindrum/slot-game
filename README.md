@@ -2,6 +2,9 @@
 
 [DEMO](https://austindrum.github.io/slot-game/)
 
+![image](https://github.com/Austindrum/slot-game/blob/master/image1.png)
+![image](https://github.com/Austindrum/slot-game/blob/master/image2.png)
+
 ## 專案內容
 - 老虎機遊戲模擬
 - 投幣後開始遊戲，三柱圖案相同即奪得彩金
